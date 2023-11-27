@@ -1,0 +1,1861 @@
+
+
+:root{
+    --capaBorder            : #999999;
+    --capaHeader            : #e2e7e2;
+    --capaRowHighlight      : rgba(205, 218, 230, 0.151);
+    --capaRecommendationBG  : #bfebbf;
+    --capaMinorBG           : #edfb4c;
+    --capaMajorBG           : #f8be3f;
+    --capaCriticalBG        : #fa3952ea;
+    --capaMinorBrd          : #eaff02;
+    --capaWhiteBG           : #ffffff;
+    --capaHighlight         : #fffb02b4;
+}
+
+.loadingGIF{
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%);
+}
+
+#siteInputDiv .capaElement input, 
+#siteInputDiv .capaElement textarea, 
+#siteInputDiv .capaElement select {
+    width: 100%; /* Sets the width to 100% of the parent div */
+    box-sizing: border-box; /* Makes sure the padding and border are included in the width */
+}
+
+    .active-icon                {
+        padding-left: 10px;
+        height          : 16px; 
+        vertical-align  : bottom;
+    }
+    .active-icon:hover          {
+        transform       : scale(1.2);
+        cursor          : pointer;}
+    .capa-squares-s             {
+        height: 30px;
+        padding-right: 20px;
+        vertical-align: bottom;  }
+    .capa-squares-m             {
+        height: 50px;
+        padding-right: 20px;
+        vertical-align: bottom;  }
+    .inactive-icon              {
+        padding-left: 10px;
+        height: 16px;
+        vertical-align: bottom;}
+
+.audit-details-icon-container{
+    float: right;
+}
+
+
+/**
+    *   Dashboard group styling
+    */
+    .group-container {
+        position: relative;
+        margin-bottom: 5px; /* Spacing between group containers */
+        /* Add more styling as needed */
+    }
+
+    .group-name {
+        display: inline-block;
+        cursor: pointer;
+       /* color: #073ef5;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #073ef5;
+        border-radius: 5px;
+        /* Add more styling as needed */
+    }
+
+    .group-icon{
+        height: 16px;
+        padding-right: 5px;
+    }
+
+    .individual-icon{
+        height: 16px;
+        padding-right: 5px;
+    }
+
+    .group-members {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: #ade5f7; /* Background color for the dropdown */
+        border: 1px solid #073ef5; /* Border for the dropdown */
+        opacity: 1;
+        border-radius: 5px;
+        z-index: 1;
+        /* Add more styling as needed */
+    }
+
+    .group-container:hover .group-members {
+        display: block;
+    }
+
+    /* Additional styling for formatting the member list */
+    .group-members div {
+        padding: 5px 10px;
+        text-align: left;
+        /* Add more styling as needed */
+    }
+
+    .group-members div:hover {
+        background-color: #f1f1f1; /* Background color for hover effect on members */
+    }
+    /**/
+
+.ms-formtable{
+    display:none;
+}
+
+
+.statusReportingDisplayAreaLocked{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ms-usereditor.readOnly input,
+.sp-peoplepicker-delImage.readOnly {
+    opacity: 1 !important;
+}
+
+.fadeToGray{
+    opacity: 0.50;
+    pointer-events: none;
+}
+
+.readOnlyAction{
+    opacity: 1;
+    pointer-events: none;
+}
+
+.headerLine2{
+    height: 2px;
+    background-color: #6888f3;
+}
+
+.textWrapCell{
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.headerLine1{
+    height: 1px;
+    background-color: #6888f3;
+}
+
+.floatingTitleSpan{
+    font-size : 120%;
+    font-family: 'Roboto';
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+table.ms-core-tableNoSpace{
+        width: 100%;
+        height: 100%;
+    }
+
+div.hideDepartments{
+    display : none;
+}
+
+
+
+div.showDepartments{
+    display : block;
+}
+
+.blueHalo{
+    border: 2px solid red !important;
+    border-radius: 4px !important;
+    padding: 1px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.clearHalo{
+    border: 2px solid transparent !important;
+    border-radius: 4px !important;
+    padding: 1px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.highlightBulletLeft{
+    border-top-width: 1px !important;
+    border-top-color: red !important;
+    border-left-width: 1px !important;
+    border-left-color: red !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: red !important;
+    cursor: pointer !important;
+}
+
+.highlightBulletRight{
+    border-top-width: 1px !important;
+    border-top-color: red !important;
+    border-right-width: 1px !important;
+    border-right-color: red !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: red !important;
+    border-left-width: 1px !important;
+    border-left-color: red !important;
+    background-color: #6888f383 !important;
+    cursor: pointer !important;
+}
+
+
+tr.blueBackground:hover {
+    background-color: var(--capaRowHighlight);
+    overflow-inline: visible;
+}
+
+tr.tableHeaderRow{
+    background-color: var(--capaHeader);
+    text-align: left;
+}
+
+.internalDeviation{
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 1.1em;
+    font-family: "roboto";
+}
+
+.auditReviewType{
+    padding-left: 20px;
+    font-size: 1.1em;
+    font-family: "roboto";
+}
+
+.actionsTitle{
+    padding-left: 20px;
+    font-size: 1.1em;
+    font-family: "roboto";
+}
+
+th.tableheadercell-border{
+    border-left: solid;
+    border-left-color: var(--capaBorder);
+    border-left-width: 1px;
+    border-right: solid;
+    border-right-color: var(--capaBorder);
+    border-right-width: 1px;
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    overflow: visible;
+    z-index: 40;
+}
+
+th.tableheadercell-noborder{
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+th.tableheadercellNarrow-noborder{
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+tr.selectedRow{
+    border-width: 1px;
+    border-color: #6888f3;
+    background-color: #6888f362;
+    height: 2.5em;
+}
+
+th.documentLeft{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    border-top-left-radius: 10px;
+    width: 100px;
+}
+
+th.documentNarrowLeft{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    border-top-left-radius: 10px;
+    width: 20px;
+}
+
+th.documentMiddle{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100px;
+}
+th.documentRight{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    border-top-right-radius: 10px;
+    width: 100px;
+}
+th.documentTitle{
+    font-family: "roboto";
+    font-weight: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+th.documentStandard{
+    font-family: "roboto";
+    font-weight: bolder;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100px;
+}
+th.documentNarrow{
+    font-family: "roboto";
+    font-weight: bolder;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20px;
+}
+td.documentNarrow{
+    font-family: "roboto";
+    font-weight: bolder;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20px;
+}
+td.documentLeft{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100px;
+}
+td.documentNarrowLeft{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    border-top-left-radius: 10px;
+    width: 20px;
+}
+td.documentMiddle{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 100px;
+}
+
+td.documentBullet{
+    font-family: "roboto";
+    padding-left: 2px;
+    padding-right: 2px;
+    align-content: center;
+    width: 50px;
+}
+
+td.documentTitle{
+    font-family: "roboto";
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+td.documentStandard{
+    font-family: "roboto";
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100px;
+}
+
+th.tableheadercell-left{
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-top-left-radius: 10px;
+}
+
+th.tableheadercellNarrow-left{
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-top-left-radius: 10px;
+}
+
+th.tableheadercell-right{
+    font-family: "roboto";
+    font-weight: lighter;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-top-right-radius: 10px;
+}
+
+td.tablecell{
+    padding-left: 8px;
+    padding-right: 8px;
+    z-index: 85;
+    overflow: visible;
+    max-width: 35%;
+}
+
+td.tablecellGrey{
+    padding-left: 8px;
+    padding-right: 8px;
+    z-index: 85;
+    overflow: visible;
+    max-width: 35%;
+    background-color: var(--capaHeader);
+}
+
+td.tablecellNarrow{
+    padding-left: 1px;
+    padding-right: 1px;
+    z-index: 85;
+    overflow: visible;
+}
+
+td.tablecellNarrowGrey{
+    padding-left: 1px;
+    padding-right: 1px;
+    z-index: 85;
+    overflow: visible;
+}
+
+
+td.tablecellalign{
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+}
+
+.editIcon{
+    height: 15px; 
+    vertical-align: bottom;
+}
+
+.editIcon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.validation{
+    height: 75px;
+    cursor: pointer;
+}
+
+.exceptionTypeHeaderRecommendation{
+    border-radius: 10px; 
+    border-color: darkgrey; 
+    border-width: 1px; 
+    border-style: solid; 
+    text-align: center;
+    font-size: 150%;
+    margin-left: 5px; 
+    margin-right : 5px; 
+    padding-left: 5px; 
+    padding-right: 5px;  
+    background-color: var(--capaRecommendationBG);
+    width: 200px;
+}
+
+.exceptionTypeHeaderDeviation{
+    border-radius: 10px; 
+    border-color: darkgrey; 
+    border-width: 1px; 
+    border-style: solid; 
+    text-align: center;
+    font-size: 150%;
+    margin-left: 5px; 
+    margin-right : 5px; 
+    padding-left: 5px; 
+    padding-right: 5px;  
+    background-color: var(--capaHeader);
+    width: 200px;
+}
+
+
+.commentaryWrapper{
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--capaBorder);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+}
+
+.statusIcon{
+    height: 15px; 
+    vertical-align: bottom;
+}
+
+.dotNoLink{
+    margin-left: 3px; 
+    margin-right: 3px; 
+    height: 15px; 
+    vertical-align: bottom;
+}
+
+.dotNoLinkLarge{
+    margin-left: 3px; 
+    margin-right: 3px; 
+    height: 18px; 
+    vertical-align: bottom;
+}
+
+.blandDotLink{
+    margin: 3px;
+    height: 15px;
+}
+
+.dotLink{
+    margin: 3px; 
+    height: 15px; 
+    vertical-align: bottom;
+}
+
+.dotLink:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.dotLinkLarge{
+    margin-left: 3px; 
+    margin-right: 3px; 
+    height: 20px; 
+    vertical-align: bottom;
+}
+
+.dotLinkLarge:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.simpleLinkIcon{
+    vertical-align: bottom;
+}
+
+.simpleLinkIcon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.linkIcon{
+    margin-left: 3px; 
+    margin-right: 3px; 
+    height: 15px; 
+    vertical-align: bottom;
+}
+
+
+
+.linkIcon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.editIcon{
+   height: 15px; 
+    vertical-align: bottom;
+}
+.editIcon:hover{
+   transform: scale(1.2);
+    cursor: pointer;
+}
+
+.bulletHolder{
+    display: flex; 
+    padding-left: 5px; 
+    padding-right: 5px; 
+    padding-top: 1px; 
+    padding-bottom: 2px;
+    width: 50px;
+}
+
+.bulletStatus{
+    display: inline-block;
+    background-color: var(--capaWhiteBG);
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    border-top-color: grey; 
+    border-right-color: grey; 
+    border-bottom-color: grey; 
+    border-left-color: lightgray;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px; 
+    border-style: solid; 
+    text-align: right; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    min-width: 40px;
+    max-width: 40px;
+    z-index: 90;
+}
+
+
+.genericBulletLeft{
+
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    min-width: 20px;
+    max-width: 20px;
+    max-height: 22px;
+}
+
+.auditBullet{
+
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: rgba(141, 177, 243, 0.664);
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.minorFinding{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaMinorBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+.minorException{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaMinorBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+.majorException{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaMajorBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+.majorFinding{
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaMajorBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+
+.criticalException{
+   border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaCriticalBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+.criticalFinding{
+   border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaCriticalBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+.unclassifiedException{
+    color: #e12246;
+    font-weight: bold;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaWhiteBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+.unclassifiedFinding{
+    color: #e12246;
+    font-weight: bold;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaWhiteBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+
+.recommendationException{
+    display: inline-block;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaRecommendationBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+.recommendationFinding{
+    display: inline-block;
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    border-top-color: grey; 
+    border-left-color: grey; 
+    border-bottom-color: grey; 
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 0px; 
+    border-style: solid; 
+    text-align: left; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    background-color: var(--capaRecommendationBG);
+    min-width: 20px;
+    max-width: 20px;
+}
+
+tr.dataRow{
+    height: 2.5em;
+    margin-top: 20px;
+}
+
+.holderClass{
+    position: relative;
+    display: inline-block;
+}
+
+.holderClassHighlight{
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+
+
+.dotFloating{
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    
+}
+
+.actionBullet{
+    display: inline-block;
+    border-radius: 5px;
+    text-align: left; 
+    background-color: rgba(124, 121, 145, 0.404);
+    padding-left: 4px;
+    padding-right: 4px;
+    font-family: "Roboto";
+    font-weight: lighter;
+    position: relative; 
+}
+
+.genericBulletLink{
+    display: inline-block;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center; 
+    align-content: center;
+    background-color: none;
+    height: 1.25em;
+    padding-left: 4px;
+    padding-right: 2px;
+    font-family: "Roboto";
+    position: relative;
+    width: 50px;}
+
+.genericBulletLink:hover{
+    display: inline-block;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center; 
+    align-content: center;
+    background-color: rgba(124, 121, 145, 0.404);
+    height: 1.25em;
+    padding-left: 4px;
+    padding-right: 2px;
+    font-family: "Roboto";
+    position: relative;
+    cursor: pointer;
+    width: 50px;}
+
+
+.genericBullet{
+    display: inline-block;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    text-align: center; 
+    align-content: center;
+    background-color: none;
+    height: 1.25em;
+    padding-left: 4px;
+    padding-right: 2px;
+    font-family: "Roboto";
+    position: relative; 
+    width: 50px;}
+
+
+.minorBullet{
+    display: inline-block;
+    border-radius: 10px; 
+    text-align: center; 
+    background-color: var(--capaMinorBG);
+    width: 50px;
+    height: 1.5em;
+    margin: 5px;
+    padding-bottom: 2px;
+    position: relative;  }
+
+.majorBullet{
+    display: inline-block;
+    border-radius: 10px; 
+    text-align: center; 
+    background-color: var(--capaMajorBG);
+    width: 50px;
+    height: 1.5em;
+    margin: 5px;
+    padding-bottom: 2px;
+    position: relative;  }
+
+.criticalBullet{
+    display: inline-block;
+    border-radius: 10px; 
+    text-align: center; 
+    background-color: var(--capaCriticalBG);
+    width: 50px;
+    height: 1.5em;
+    margin: 5px;
+    padding-bottom: 2px;
+    position: relative;  }
+    
+.recommendationBullet{
+    display: inline-block;
+    border-radius: 10px; 
+    text-align: center; 
+    background-color: var(--capaRecommendationBG);
+    width: 50px;
+    height: 1.5em;
+    margin: 5px;
+    padding-bottom: 2px;
+    position: relative;  }
+
+
+
+
+
+
+td{
+    vertical-align: top;
+}
+
+
+
+
+
+.floatingActionShow{
+    display : inline-block;
+    position: absolute;
+    left    : -10px;
+    top     : 10px;
+    z-index : 200;
+    box-shadow: 10px 10px 5px #aaaaaa;}
+
+.floatingActionHide{
+    display: none;}
+
+.floatingActionHeader{
+    background-color: var(--capaHeader);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+.floatingActionData{
+    background-color: var(--capaWhiteBG);
+    border-radius: 0px 0px 5px 5px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    position: relative; 
+}
+
+.floatingExceptionNew{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+.floatingExceptionShow{
+    display : inline-block;
+    position: absolute;
+    top     : -5px;
+    left: 10px;
+    z-index : 100;
+    box-shadow: 10px 10px 5px #aaaaaa;}
+
+.floatingExceptionHide{
+    display: none;}
+
+.floatingExceptionHeader{
+    background-color: var(--capaHeader);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+.floatingDeviationMinor{
+    background-color: var(--capaMinorBG);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+
+.floatingDeviationMajor{
+    background-color: var(--capaMajorBG);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+
+.floatingDeviationCritical{
+    background-color: var(--capaCriticalBG);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+
+.floatingDeviationRecommendation{
+    background-color: var(--capaRecommendationBG);
+    border-radius: 5px 5px 0px 0px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+
+.floatingDeviationError{
+    background-color: var(--capaWhiteBG);
+    border-radius: 5px 5px 0px 0px;
+    color: var(--capaCriticalBG);
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 1px;
+    position: relative;     }
+
+.floatingExceptionData{
+    background-color: var(--capaWhiteBG);
+    border-radius: 0px 0px 5px 5px;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    width: 400px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    position: relative; 
+}
+
+
+#sideNavBox {
+    display:none;
+}
+
+#contentBox{
+    margin-left:25px;
+}
+
+.sp-peoplepicker-topLevel{
+    border-radius : 3px;
+    width : 80%;
+}
+
+
+.required{
+    border-radius : 3px;
+    border-color : red !important;
+    border-style: solid;
+    border-width: 1px;
+}
+
+input[type=text]{
+    border-radius : 3px;
+}
+
+
+.requiredLight{
+    border-color : hsl(4, 100%, 50%) !important;
+}
+
+input[type=button] {
+    background-color: rgb(187, 194, 187);
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type=button][class=brightButton] {
+    background-color: rgb(82, 165, 82);
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type=button][class=brightButton]:hover {
+    background-color: rgb(104, 243, 104);
+    border: none;
+    color:black;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type=button][class=rejectButton] {
+    background-color: #6888f3;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input[type=button][class=rejectButton]:hover {
+    background-color: #6888f3;
+    border: none;
+    color:black;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+select {
+    border-radius : 3px;
+    width : 100%;
+}
+
+textarea {
+    border-radius : 3px;
+}
+
+.ms-formbody{
+    width : 100%;
+}
+
+.elementHeader{
+    vertical-align : top;
+}
+
+.rolloverImage:hover {
+     transform: scale(1.2);
+     cursor: pointer;
+}
+
+.rolloverImage {
+     display: inline-block;
+}
+
+.ui-tooltip, 
+  .ui-widget, 
+  .ui-corner-all, 
+  .ui-widget-content,
+  .ui-tooltip-content {
+    background-color: #f8f8ff;
+    max-width: 800px;
+}
+
+.sectionBox{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9fa09fc9;
+    border-radius: 5px;
+    overflow: visible;
+    width: 100%;
+    z-index: 50;
+}
+
+.auditSectionBox{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9fa09fc9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-sizing:  border-box;
+}
+
+.auditSectionBox200{
+    max-width: 200px;
+    width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9fa09fc9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-sizing:  border-box;
+}
+
+.floaterdetails{
+    text-align: justify;
+    width: 200px;
+    z-index: 99;
+}
+
+tr .spacer{
+    height: 10px;
+}
+
+.keyDateToggle{
+    display: inline-block;
+}
+
+
+.actionSectionBox{
+  background-color: var(--capaHeader);
+    font-family: 'Roboto';
+    border-color: var(--capaBorder);
+    border-style: solid;
+    z-index: 125;
+    border-width: 1px 1px 0px 1px;
+    width: 200px;
+    max-width: 200px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.actionSectionPadding{
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: var(--capaBorder);
+    border-radius: 0px 0px 10px 10px;
+    background-color: #ffffff;
+    width: 200px;
+    max-width: 200px;
+    display: inline-block;
+    position: absolute;
+    z-index: 170;
+    overflow: auto;
+    padding:5px;
+}
+
+.sectionHeader{
+    background-color: var(--capaHeader);
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: var(--capaBorder);
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    position: relative;
+}
+
+.auditSectionPadding{
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: visible;
+}
+
+.sectionPadding{
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 200px;
+    overflow: visible;
+} 
+
+a:link {
+color: black;
+text-decoration:none;
+}
+
+a:visited {
+color: black;
+text-decoration:none;
+}
+
+a:hover {
+color: black;
+text-decoration:none;
+}
+
+a:active {
+color: black;
+text-decoration:none;
+}
+
+.spanningdiv{
+    display: inline-block;
+}
+
+.referenceSpan {
+    white-space: nowrap;
+}
+
+.sectionHeaderDeviation-Critical{
+    background-color: #e12246;
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: #9fa09fc9;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+.sectionHeaderDeviation-Minor{
+    background-color: var(--capaMinorBG);
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: var(--capaMinorBrd);
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+.sectionHeaderDeviation-Major{
+    background-color: #f5b139;
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: #9fa09fc9;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+.sectionHeaderDeviation{
+    background-color: var(--capaHeader);
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: #9fa09fc9;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+
+.sectionHeaderRecommendation{
+    background-color: var(--capaRecommendationBG);
+    border-radius: 5px 5px 0px 0px;
+    font-size : 120%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-color: #9fa09fc9;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+}
+ 
+.commentHeader{
+    background-color: var(--capaHeader);
+    border-radius: 5px 5px 0px 0px;
+    font-size : 90%;
+    font-family: 'Roboto';
+    padding : 3px 0px 0px 10px;
+    border-style: none;
+    border-width: 0px;
+}
+
+.commentComment{
+    padding : 5px 5px 5px 5px;
+}
+  
+.commentHolder{
+  margin:4px, 4px;
+  padding:4px;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}
+
+.commentDate{
+  background-color: var(--capaHeader);
+  font-size : 85%;
+  font-family: 'Roboto';
+  padding : 3px 0px 0px 10px;
+  border-color: #9fa09fc9;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+}
+
+.commentBox{
+      width:  100%;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #9fa09fc9;
+      border-radius: 5px;
+}
+
+.headerTitleDIV{
+  font-size : 160%;
+  font-family: 'Roboto';
+  width: 100%;
+  float: left;
+  color: #6888f3;
+}
+
+.exceptionManagerInput{
+    width: 400px;
+    border-width: 2px;
+    border-color: blue;
+}
+
+.headerSubTitleDIV{
+  font-size : 150%;
+  font-family: 'Roboto';  
+  float: left;
+}
+
+.headerSubTitleArchived{
+  font-size : 275%;
+  color: #e12246;
+  font-family: 'Roboto';
+  width: 100%;
+  float: left;
+}
+
+.greyCheckBox{
+    accent-color: lightgrey;
+}
+
+.lockedCheckbox{
+    accent-color: var(--capaHighlight);
+    pointer-events: none;
+}
+
+.lockedCheckboxLabel{
+    pointer-events: none;
+}
+
+.universalDateDisplay{
+    padding-right: 20px;
+}
+
+.filterToggle{
+    float: right;
+}
+
+.filterDivHide{
+    display: none;
+}
+
+.filterDivShow{
+    float: right;
+    margin-right: 20px;
+    display: block;
+    z-index: 400;
+    position: absolute;
+    width: 600px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--capaBorder);
+    border-radius: 10px;
+    min-height: 600px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #43a9fc;
+    padding: 20px;
+}
+
+.createTitle{
+    font-size : 150%;
+    font-family: 'Roboto';
+}
+
+.createDivHide{
+    display: none;
+}
+
+.menuShowDiv{
+    float: left;
+    display: block;
+    z-index: 100;
+    position: absolute;
+    width: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--capaBorder);
+    border-radius: 10px;
+    min-height: 200px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #1bda5a;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: -40px;
+}
+
+.menuHideDiv{
+    display: none;
+}
+
+.createDivShow{
+    float: left;
+    display: block;
+    z-index: 100;
+    position: absolute;
+    width: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--capaBorder);
+    border-radius: 10px;
+    min-height: 200px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #1bda5a;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: -40px;
+}
+
+
+.settingsDivHide{
+    display: none;
+}
+
+.settingsDivShow{
+    float: left;
+    display: block;
+    z-index: 100;
+    position: absolute;
+    width: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--capaBorder);
+    border-radius: 10px;
+    min-height: 200px;
+    background-color: white;
+    box-shadow: 5px 5px 5px #1bda5a;
+    padding: 20px;
+    margin-left: 15px;
+    margin-top: -40px;
+}
+
+
+
+
+
+.filterDisplayHeader{
+    font-size : 120%;
+    font-family: 'Roboto';
+}
+
+.dateRangeClass{
+    width: 400px;
+}
+
+.filterSwitch{
+    height: 30px;
+    cursor: pointer;
+}
+
+.createSwitch{
+    height: 30px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.menuIcon{
+    height: 30px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+tr.actionTableHeaderRow{
+    text-align: left;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.displayTableData tbody tr:first-child td{
+    padding-top: 8px;
+}
+
+th.actionTableStandard{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    
+}
+
+td.actionTableStandard{
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    
+}
+
+td.actionIconNarrow{
+       padding-left: 1px;
+    padding-right: 1px;
+    width: 20px;
+
+}
+
+div.hiddenSortValue{
+    display: none;
+}
+
+th.actionIconNarrow{
+       padding-left: 1px;
+    padding-right: 1px;
+     border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 20px;
+}
+
+
+td.actionNarrow{
+    width: 20px;
+     border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+td.actionStandard{
+    padding-left: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 100px;
+}
+
+th.actionTableExtraWide{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 250px;
+}
+
+
+th.actionTableXXLWide{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 350px;
+}
+
+#getFile{
+    border-width: 1px;
+    border-color:  rgb(187, 194, 187);
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+
+th.actionTableNarrow{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 100px;
+}
+
+td.actionTableNarrow{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100px;
+    
+}
+
+td.actionTableXXLWide {
+   
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 350px;
+}
+
+td.actionTableExtraWide{
+   
+    padding-left: 5px;
+    padding-right: 5px;
+
+    width: 250px;
+}
+
+th.actionTableWide{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    width: 200px;
+}
+
+th.actionTableBullet{
+    font-family: "roboto";
+    font-size: 110%;
+    font-weight: lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+
+.archiveAction{
+    color:#6888f3;
+    background-color: #e5eaf8;
+}
+
+.archiveAction:hover{
+    color:#073ef5;
+    background-color: #f6f7f8;
+}
+
+.actionStatusActOption{
+    color:#6888f3;
+    background-color: #e5eaf8;
+}
+
+.actionStatusActOption:hover{
+    color:#073ef5;
+    background-color: #f6f7f8;
+}
+
+.detailsInput{
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.fileInputClass{
+    border-style: none;
+    border-color: white;
+}
+
+.openLink{
+    height: 18px;
+    transform: rotate(270deg);
+    margin-right: 10px;
+    vertical-align: bottom;
+    cursor: pointer !important;
+}
+
+.binClassHasActive{
+    height: 18px;
+    opacity: 0.25;
+}
+
+.binClass{
+    height: 18px;
+    opacity: 0.25;
+}
+
+.binClass:hover{
+    height: 20px;
+    opacity: 1;
+}

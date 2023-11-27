@@ -1,0 +1,2 @@
+# capa-manager
+Core capa
